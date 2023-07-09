@@ -1,0 +1,15 @@
+<h1>Atists</h1>
+<div id="artists">
+<% artists.forEach(artist => { %>
+    <div id="artist">
+        <% if (artist.images && artist.images.length > 0 && artist.images[0].url) { %>
+            <img src="<%= artist.images[0].url %>" alt="artistImg"> <br>
+        <% } %>
+        <%= artist.name %> <br>
+        <a href="/albums/<%=artist.id%>">
+        <button>View Albums</button>
+        </a>
+        <% }); %>
+    </div>
+
+</div>

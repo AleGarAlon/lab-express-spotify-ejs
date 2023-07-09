@@ -1,0 +1,19 @@
+<h1>Tracks</h1> 
+
+<% tracks.forEach(track => { %>
+    <div>
+        <%= track.name %> <br>
+        <% if (track.preview_url) { %>
+            <audio src="<%= track.preview_url %>" controls></audio>
+            <br>
+            <!-- <button onclick="const audio = this.previousElementSibling; if (audio.paused) { audio.play(); } else { audio.pause(); }"> 
+                 <% if (track.is_playing) { %> 
+                    Pause
+                <% } else { %>
+                    Play
+                <% } %>
+            </button>-->
+        <% } %>
+        
+    </div>
+<% }); %>
